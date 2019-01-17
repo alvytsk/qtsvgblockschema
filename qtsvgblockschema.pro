@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui svg
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -26,10 +26,20 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    diagramwidget.cpp \
+    system.cpp \
+    unit1.cpp \
+    unit2.cpp \
+    unit3.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    diagramwidget.h \
+    system.h \
+    unit1.h \
+    unit2.h \
+    unit3.h
 
 FORMS += \
         mainwindow.ui
@@ -38,3 +48,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    blockschema.qrc
