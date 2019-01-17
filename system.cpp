@@ -3,21 +3,28 @@
 #include <QtDebug>
 
 #include "system.h"
+#include "unit1.h"
+#include "unit2.h"
+#include "unit3.h"
 
 System::System()
 {
     QString resource = ":/diagram/test";
-
     m_diagram = new QGraphicsSvgItem(resource);
+
+    m_scene = new QGraphicsScene();
+    m_scene->addItem(m_diagram);
 
     qDebug() << m_diagram;
 
-    m_scene.addItem(m_diagram);
+    unit1 = new Unit1(this);
+    unit2 = new Unit2(this);
+    unit3 = new Unit3(this);
 }
 
 QGraphicsScene * System::scene()
 {
-    return &m_scene;
+    return m_scene;
 }
 
 const QGraphicsSvgItem * System::diagram() const
@@ -49,15 +56,13 @@ void UnitItem::mousePressEvent(QGraphicsSceneMouseEvent * event)
 
 Unit::Unit(const QString & id, System * system)
 {
-    m_rect = system->diagram()->renderer()->boundsOnElement(id);
+    qDebug() << id;
 
+    m_rect = system->diagram()->renderer()->boundsOnElement(id);
     qDebug() << m_rect;
 
     QMatrix transform = system->diagram()->renderer()->matrixForElement(id);
-    qDebug() << transform;
-
     m_rect = transform.mapRect(m_rect);
-    m_rect.adjust(1.0, 1.0, -1.5, -1.5);
 
     qDebug() << m_rect;
 

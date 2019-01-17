@@ -1,3 +1,5 @@
+#include <QDebug>
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
@@ -8,13 +10,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     display = new DiagramWidget(ui->centralWidget);
-
     system = new System();
-    unit1 = new Unit1(system);
-    unit2 = new Unit2(system);
-    unit3 = new Unit3(system);
-
     display->setScene(system->scene());
+    display->scene()->setSceneRect(0,0,400,400);
+
+    qDebug() << display->scene()->sceneRect().size();
 }
 
 MainWindow::~MainWindow()

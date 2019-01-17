@@ -5,5 +5,5 @@
 
 Unit1::Unit1(System * system) : Unit("Unit 1", system)
 {
-    qDebug() << "Unit1";
+    ;
 }

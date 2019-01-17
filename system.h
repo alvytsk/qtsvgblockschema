@@ -6,6 +6,10 @@
 #include <QGraphicsSvgItem>
 #include <QGraphicsRectItem>
 
+class Unit1;
+class Unit2;
+class Unit3;
+
 class System : public QObject
 {
     Q_OBJECT
@@ -16,8 +20,12 @@ public:
     const QGraphicsSvgItem * diagram() const;
 
 private:
-    QGraphicsScene m_scene;
+    QGraphicsScene * m_scene;
     QGraphicsSvgItem * m_diagram;
+
+    Unit1 * unit1;
+    Unit2 * unit2;
+    Unit3 * unit3;
 };
 
 

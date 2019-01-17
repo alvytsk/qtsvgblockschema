@@ -5,9 +5,6 @@
 
 #include "diagramwidget.h"
 #include "system.h"
-#include "unit1.h"
-#include "unit2.h"
-#include "unit3.h"
 
 namespace Ui {
 class MainWindow;
@@ -26,10 +23,6 @@ private:
 
     DiagramWidget * display;
     System * system;
-
-    Unit1 * unit1;
-    Unit2 * unit2;
-    Unit3 * unit3;
 };
 
 #endif // MAINWINDOW_H
