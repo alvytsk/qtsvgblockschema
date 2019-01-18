@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
     display = new DiagramWidget(ui->centralWidget);
     system = new System();
     display->setScene(system->scene());
-    display->scene()->setSceneRect(0,0,400,400);
+    setCentralWidget(display);
 
     qDebug() << display->scene()->sceneRect().size();
 }

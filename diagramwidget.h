@@ -13,8 +13,13 @@ public:
 
 signals:
 
+public slots:
+    void zoomIn();
+    void zoomOut();
+
 protected:
     bool event(QEvent *);
+    void wheelEvent(QWheelEvent *);
 
 public slots:
 };

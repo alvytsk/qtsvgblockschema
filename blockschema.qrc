@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/diagram">
         <file alias="test">images/test.svg</file>
+        <file alias="test2">images/test2.svg</file>
     </qresource>
 </RCC>

@@ -5,6 +5,7 @@
 #include <QGraphicsScene>
 #include <QGraphicsSvgItem>
 #include <QGraphicsRectItem>
+#include <QGraphicsTextItem>
 
 class Unit1;
 class Unit2;
@@ -52,11 +53,15 @@ class Unit : public QObject
 
 public:
     Unit(const QString & id, System *);
+    void setText(const QString &);
+
+public slots:
+    void adjustText();
 
 private:
     QRectF m_rect;
     UnitItem * m_item;
-    QGraphicsTextItem * m_text;
+    QGraphicsSimpleTextItem * m_text;
 };
 
 #endif // SYSTEM_H

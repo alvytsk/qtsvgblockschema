@@ -9,7 +9,7 @@
 
 System::System()
 {
-    QString resource = ":/diagram/test";
+    QString resource = ":/diagram/test2";
     m_diagram = new QGraphicsSvgItem(resource);
 
     m_scene = new QGraphicsScene();
@@ -46,9 +46,9 @@ UnitItem::~UnitItem()
 void UnitItem::mousePressEvent(QGraphicsSceneMouseEvent * event)
 {
     if(!state)
-        setBrush(QColor(0,255,0));
-    else {
-        setBrush(QColor(255,0,0));
+        setBrush(QColor(139,195,74)); //100, 221, 23 - good green!
+    else {                              //255, 152, 0 - orange
+        setBrush(QColor(255, 152, 0)); //244, 67,  54 - red
     }
 
     state = !state;
@@ -56,22 +56,36 @@ void UnitItem::mousePressEvent(QGraphicsSceneMouseEvent * event)
 
 Unit::Unit(const QString & id, System * system)
 {
-    qDebug() << id;
-
     m_rect = system->diagram()->renderer()->boundsOnElement(id);
-    qDebug() << m_rect;
+    qDebug() << id << m_rect;
 
     QMatrix transform = system->diagram()->renderer()->matrixForElement(id);
     m_rect = transform.mapRect(m_rect);
-
     qDebug() << m_rect;
 
     m_item = new UnitItem(m_rect);
     m_item->setZValue(-1);
     m_item->setPen(QPen(Qt::NoPen));
-    m_item->setBrush(QColor(255,0,0));
+    m_item->setBrush(QColor(244,67,54));
     system->scene()->addItem(m_item);
 
-    m_text = new QGraphicsTextItem();
+    m_text = new QGraphicsSimpleTextItem();
     system->scene()->addItem(m_text);
+}
+
+void Unit::setText(const QString & text)
+{
+    m_text->setText(text);
+    adjustText();
+}
+
+void Unit::adjustText()
+{
+    QRectF bound = m_text->boundingRect();
+    QPointF offset(bound.width()/2, bound.height()/2);
+    QFont font;
+    font.setFamily("Helvetica");
+    font.setWeight(QFont::Normal);
+    m_text->setFont(font);
+    m_text->setPos(m_rect.center() - offset);
 }
