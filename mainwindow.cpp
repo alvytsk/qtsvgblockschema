@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    display = new DiagramWidget(ui->centralWidget);
+    display = new DiagramWidget();
     system = new System();
     display->setScene(system->scene());
     setCentralWidget(display);

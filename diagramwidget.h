@@ -20,6 +20,7 @@ public slots:
 protected:
     bool event(QEvent *);
     void wheelEvent(QWheelEvent *);
+    void resizeEvent ( QResizeEvent * );
 
 public slots:
 };

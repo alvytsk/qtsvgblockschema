@@ -9,8 +9,8 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="637.79529"
-   height="425.19684"
+   width="600"
+   height="400"
    id="svg2"
    version="1.1"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
@@ -52,9 +52,9 @@
      borderopacity="0.49803922"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.2230428"
-     inkscape:cx="122.17255"
-     inkscape:cy="301.39312"
+     inkscape:zoom="3.1438573"
+     inkscape:cx="181.25605"
+     inkscape:cy="254.4778"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -96,34 +96,34 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-627.16535)">
+     transform="translate(0,-652.36219)">
     <rect
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="Unit1"
        width="53.149605"
-       height="53.149616"
-       x="35.433071"
-       y="680.31494" />
-    <rect
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
-       id="Unit2"
-       width="35.433067"
        height="53.149616"
        x="124.01575"
        y="680.31494" />
     <rect
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="Unit2"
+       width="88.58268"
+       height="53.149616"
+       x="70.86615"
+       y="822.04724" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="Unit3"
-       width="35.433067"
+       width="70.866173"
        height="53.149635"
-       x="159.44881"
-       y="680.31494" />
+       x="159.44879"
+       y="822.04724" />
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="Unit4"
        width="159.44882"
        height="35.433071"
-       x="35.433071"
-       y="751.18109" />
+       x="70.866135"
+       y="786.61414" />
   </g>
 </svg>

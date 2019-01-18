@@ -16,6 +16,12 @@ DiagramWidget::DiagramWidget(QWidget *parent) : QGraphicsView(parent)
     setFrameShape(QFrame::NoFrame);
 }
 
+void DiagramWidget::resizeEvent ( QResizeEvent * event )
+{
+    fitInView(sceneRect(), Qt::KeepAspectRatio);
+    viewport()->update();
+}
+
 void DiagramWidget::wheelEvent(QWheelEvent *e)
 {
     if ( e->modifiers() == Qt::ControlModifier )
@@ -34,7 +40,6 @@ void DiagramWidget::zoomIn()
     if ( viewRect().width() > 0.1 )
     {
         scale(sqrt(2.0), sqrt(2.0));
-        fitInView(sceneRect(), Qt::KeepAspectRatio);
         viewport()->update();
     }
 }
@@ -44,7 +49,6 @@ void DiagramWidget::zoomOut()
     if ( !viewRect().contains(sceneRect()) )
     {
         scale(sqrt(0.5), sqrt(0.5));
-        fitInView(sceneRect(), Qt::KeepAspectRatio);
         viewport()->update();
     }
 }
